@@ -18,6 +18,7 @@ const Menu = () => {
   const [hoverSkill, setHoverSkill] = useState(false);
   const [hoverProject, setHoverProject] = useState(false);
   const [hoverContact, setHoverContact] = useState(false);
+
   return (
     <div className="bg-transparent fixed bottom-0 left-0 right-0 p-1">
       <motion.div
