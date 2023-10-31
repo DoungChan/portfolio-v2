@@ -95,6 +95,17 @@ const about = () => {
             <FontAwesomeIcon icon={faAward} size="lg" />
             <p>Jobify volunteer certificate</p>
           </div>
+          <h2 className="text-xl lg:text-2xl font-bold py-3 pr-20 pl-5 border-2 my-4">
+            LANGUAGE
+          </h2>
+          <div className=" flex gap-2">
+            <FontAwesomeIcon icon={faAward} size="lg" />
+            <p>Khmer</p>
+          </div>
+          <div className=" flex gap-2">
+            <FontAwesomeIcon icon={faAward} size="lg" />
+            <p>English</p>
+          </div>
         </div>
       </motion.div>
     </div>
