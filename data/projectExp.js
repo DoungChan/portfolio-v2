@@ -54,7 +54,7 @@ const projectExp = [
     image: "/AI-Service.png",
     name: "AI Recommendation Service",
     description:
-      " Queue is an adroid native application which is build help customer order queue in the shop, which mean the appiaction will alter whatever the order is reading, it will the make eviroement in the shop more quiet and peace, the application was build by using Kotlin, and FastApi.",
+      "I was challenge my self to buil this site bot UX/UI and frontend within 2 day. AI Recommendation Service is a web application that allows users to get recommendation of movies, books, and music. The application allows users to get recommendation of movies, books, and music. The application allows users to get recommendation of movies, books, and music. The application allows users to get recommendation of movies, books, and music.",
     github: "https://github.com/DoungChan/AI-Services",
     link: "https://ai-services-nine.vercel.app/ ",
   },
