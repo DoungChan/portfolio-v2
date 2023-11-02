@@ -184,6 +184,27 @@ export const Technology = () => {
       </div>
       <div
         className="flex 
+        text-center 
+        bg-slate-300 hover:bg-transparent
+        duration-1000 ease-linear
+        shadow-md shadow-black gap-3  px-2"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          width="48"
+          height="48"
+          viewBox="0 0 50 50"
+        >
+          <path d="M49.729 11h-.85c-1.051 0-2.041.49-2.68 1.324l-8.7 11.377-8.7-11.377C28.162 11.49 27.171 11 26.121 11h-.85l10.971 14.346L25.036 40h.85c1.051 0 2.041-.49 2.679-1.324L37.5 26.992l8.935 11.684C47.073 39.51 48.063 40 49.114 40h.85L38.758 25.346 49.729 11zM21.289 34.242c-2.554 3.881-7.582 5.87-12.389 4.116C4.671 36.815 2 32.611 2 28.109L2 27h12v0h11l0-4.134c0-6.505-4.818-12.2-11.295-12.809C6.273 9.358 0 15.21 0 22.5l0 5.573c0 5.371 3.215 10.364 8.269 12.183 6.603 2.376 13.548-1.17 15.896-7.256 0 0 0 0 0 0h-.638C22.616 33 21.789 33.481 21.289 34.242zM2 22.5C2 16.71 6.71 12 12.5 12S23 16.71 23 22.5V25H2V22.5z"></path>
+        </svg>
+        <p className="text-xs align-middle text-center font-semibold text-black mt-3 ">
+          Express JS
+        </p>
+      </div>
+      <div
+        className="flex 
     text-center 
     bg-slate-300 hover:bg-transparent
     duration-1000 ease-linear
@@ -232,34 +253,7 @@ export const Technology = () => {
           Java
         </p>
       </div>
-      <div
-        className="flex 
- text-center 
- bg-slate-300 hover:bg-transparent
- duration-1000 ease-linear
- shadow-md shadow-black gap-3  px-2"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          x="0px"
-          y="0px"
-          width="48"
-          height="48"
-          viewBox="0 0 48 48"
-        >
-          <path
-            fill="#8bc34a"
-            d="M43.982,23.635c0.069-4.261-0.891-9.328-2.891-15.273l-1.568-4.662l-2.13,4.433 c-0.114,0.237-0.244,0.469-0.38,0.698C33.514,5.827,28.974,4,24,4C12.954,4,4,12.954,4,24c0,11.046,8.954,20,20,20s20-8.954,20-20 C44,23.877,43.984,23.758,43.982,23.635z"
-          ></path>
-          <path
-            fill="#fff"
-            d="M39.385 32.558c-3.123 4.302-8.651 4.533-13.854 4.442H18.75h-1.938c4.428-1.593 7.063-1.972 9.754-3.4 5.068-2.665 10.078-8.496 11.121-14.562-1.93 5.836-7.779 10.85-13.109 12.889-3.652 1.393-10.248 2.745-10.248 2.745l-.267-.145C9.573 32.268 9.437 22.214 17.6 18.968c3.574-1.423 6.993-.641 10.854-1.593 4.122-1.012 8.89-4.208 10.83-8.375C41.456 15.667 44.07 26.106 39.385 32.558L39.385 32.558zM15.668 38.445C15.386 38.795 14.955 39 14.505 39c-.823 0-1.495-.677-1.495-1.5s.677-1.5 1.495-1.5c.341 0 .677.118.941.336C16.086 36.855 16.186 37.805 15.668 38.445L15.668 38.445z"
-          ></path>
-        </svg>
-        <p className="text-xs align-middle text-center font-semibold text-black mt-3 ">
-          Spring Boot
-        </p>
-      </div>
+
       <div
         className="flex 
   text-center 

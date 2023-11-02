@@ -1,11 +1,12 @@
 "use client";
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Menu from "@/components/Menu";
 import { useState, useEffect } from "react";
 import { shuffle } from "lodash";
 import { useParams } from "next/navigation";
+import { icon } from "@fortawesome/fontawesome-svg-core";
+import Head from "next/head";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
@@ -36,8 +37,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <head>
+          <title>Doungchan | Porfolio</title>
+          <link rel="icon" href="/favicon-16x16.png" />
+        </head>
         <div
-          className={`bg-gradient-to-b to-[#121212] ${color} min-w-full lg:px-64 px-5 py-10 lg:py-0 text-white`}
+          className={`bg-gradient-to-b to-[#121212] ${color} min-w-full  text-white lg:px-64 px-5 py-10 lg:py-0 `}
         >
           {children}
           <Menu />

@@ -43,13 +43,13 @@ const about = () => {
               user-friendly products. I believe in continuous learning and value
               the insights gained from collaborating with others.
             </p>
-            <p className="text-opacity-60 text-sm py-4">
+            <p className="text-opacity-60 text-xs py-4">
               I am a qualified software engineer with 4 years of experience with
               a demonstrated history of working in the information technology
               and services industry. Skilled in JavaScript, React, Node.js,
               MongoDB, Express.js, and TypeScript.
             </p>
-            <p className="text-opacity-60 text-sm">
+            <p className="text-opacity-60 text-xs">
               Feel free to explore my portfolio for project examples. If you
               have any questions or collaboration opportunities, let's connect
               and create remarkable solutions together.
