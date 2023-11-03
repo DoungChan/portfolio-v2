@@ -54,7 +54,7 @@ const projectExp = [
     image: "/AI-Service.png",
     name: "AI Recommendation Service",
     description:
-      "I was challenge my self to buil this site bot UX/UI and frontend within 2 day. AI Recommendation Service is a web application that allows users to get recommendation of movies, books, and music. The application allows users to get recommendation of movies, books, and music. The application allows users to get recommendation of movies, books, and music. The application allows users to get recommendation of movies, books, and music.",
+      "I was challenge my self to build this site both UX/UI and frontend within 2 day. AI Recommendation Service is a web application that allows users to get recommendation of movies, books, and music. The application allows users to get recommendation of movies, books, and music. The application allows users to get recommendation of movies, books, and music. The application allows users to get recommendation of movies, books, and music.",
     github: "https://github.com/DoungChan/AI-Services",
     link: "https://ai-services-nine.vercel.app/ ",
   },
