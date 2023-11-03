@@ -38,7 +38,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <head>
-          <title>Doungchan | Porfolio</title>
+          <title>Doungchan | Portfolio</title>
           <link rel="icon" href="/favicon-16x16.png" />
         </head>
         <div
