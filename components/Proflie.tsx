@@ -77,8 +77,8 @@ export const Profile = () => {
           willingness to learn new things.
         </p>
         <button className="p-3 bg-slate-700 rounded-md mt-2">
-          <a href="https://drive.google.com/file/d/1tnyjmZqKz0OO_anVzgOO98xRng03xjp7/view?usp=drive_link">
-            Download CV
+          <a href="https://drive.google.com/file/d/1uGGUFJ84U9DP-2BRmA9hh8_Y_2I4k5GE/view?usp=drive_link">
+            Preview CV
           </a>
         </button>
       </motion.div>
