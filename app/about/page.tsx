@@ -13,7 +13,7 @@ const about = () => {
         animate={{ opacity: 1, y: 1 }}
         initial={{ opacity: 1, y: 2000 }}
         transition={{
-          duration: 4,
+          duration: 2,
           delay: 0.5,
           bounceStiffness: 100,
           type: "spring",

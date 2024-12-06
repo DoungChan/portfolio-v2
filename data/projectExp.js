@@ -63,15 +63,15 @@ const projectExp = [
       image: "/Home-M-POS.png",
       name: "M-POS Landing Page",
       description:
-         "Fully responsive landing page for M-POS which is designed to support and promote a mobile point-of-sale (M-POS) system. The landing page showcases the features and benefits of the M-POS system, highlighting its ease of use, security, and convenience for businesses of all sizes. With a modern and sleek design, the landing page effectively communicates the value proposition of the M-POS system to potential customers. Built with Vue2, the landing page ensures a smooth and interactive user experience across different devices and screen sizes. biuld with Vuejs.",
+         "A fully responsive landing page for M-POS, designed to promote a mobile point-of-sale (M-POS) system, showcasing its features, benefits, ease of use, security, and convenience for businesses of all sizes. With a modern, sleek design, the page effectively communicates the M-POS system's value proposition. Built using Vue2, it ensures a smooth, interactive user experience across various devices and screen sizes.",
       github: "",
-      link: "http://13.228.102.178:6002/ ",
+      link: "https://www.m-pos.cc/ ",
    },
    {
       image: "/SKYBOOKING.png",
       name: "SkyBooking",
       description:
-         "I built a flight and hotel booking application as an H5 (HTML5) application. This application allows users to search and book flights and hotels for their travel needs. Users can specify their travel dates, destinations, and preferences to find the best flight and hotel options. The application provides a user-friendly interface with intuitive search filters and sorting options. It also integrates with external APIs to fetch real-time flight and hotel data. The application is built using HTML5, CSS3, and JavaScript, ensuring cross-platform compatibility and responsive design. ",
+         "I built an H5 flight and hotel booking app that allows users to search and book flights and hotels based on travel dates, destinations, and preferences. It features a user-friendly interface with intuitive filters and sorting options. The app integrates with external APIs for real-time data and is built using HTML5, CSS3, and JavaScript for cross-platform compatibility and responsiveness. ",
       github: "",
       link: "https://test-h5.skybooking.cc/",
    },
@@ -82,6 +82,14 @@ const projectExp = [
          "The Back Office Dashboard is a web application that provides administrators with a centralized platform to manage and monitor various aspects of the system. It includes features such as user management, content management, analytics, and reporting. The dashboard is built using React, Node.js, Express, MongoDB, and Material-UI.",
       github: "",
       link: "https://test-bo.skybooking.cc/auth/login",
+   },
+   {
+      image: "/teccadoor.jpg",
+      name: "Teccadoor",
+      description:
+         "Teccadoor that allows users to search the latest technology blogs from around the world written in English and check summaries in Japanese. The tool uses Llama3 (※) for translation, improving the accuracy of technical term translations.",
+      github: "",
+      link: "https://teccadoor.kirirom-digital.com/",
    },
    // add more skills as needed
 ];

@@ -16,10 +16,12 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "framer-motion": "^10.16.4",
     "lodash": "^4.17.21",
-    "next": "14.0.0",
+    "next": "^14.2.20",
+    "punycode": "^2.3.1",
     "react": "^18",
     "react-dom": "^18",
-    "react-router-dom": "^6.17.0"
+    "react-router-dom": "^6.17.0",
+    "sharp": "^0.33.5"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.200",
