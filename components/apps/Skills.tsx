@@ -91,8 +91,8 @@ export default function Skills({ payload, payloadVersion }: AppProps) {
                                  <TechLogo name={s} className="h-6 w-6" />
                               </span>
                               <span className="min-w-0">
-                                 <span className="block truncate text-sm2 font-medium text-label">{s}</span>
-                                 <span className="block text-2xs text-label-3">
+                                 <span className="line-clamp-2 block text-sm2 font-medium leading-tight text-label">{s}</span>
+                                 <span className="block truncate text-2xs text-label-3">
                                     {usage[s] ? `${usage[s]} project${usage[s] > 1 ? "s" : ""}` : c.title}
                                  </span>
                               </span>
