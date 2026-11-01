@@ -2,42 +2,105 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Semantic colors, stored as "R G B" so Tailwind can apply alpha. */
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+   --surface: 255 255 255;
+   --surface-2: 246 246 248;
+   --surface-3: 232 232 237;
+   --label: 29 29 31;
+   --label-2: 99 99 104;
+   --label-3: 142 142 147;
+   --separator: 0 0 0;
+   --accent: 0 122 255;
+   --menubar-h: 28px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.dark {
+   --surface: 30 30 32;
+   --surface-2: 40 40 44;
+   --surface-3: 58 58 62;
+   --label: 245 245 247;
+   --label-2: 166 166 172;
+   --label-3: 114 114 120;
+   --separator: 255 255 255;
+   --accent: 10 132 255;
+}
+
+html,
+body {
+   height: 100%;
+   overscroll-behavior: none;
+   background: #141428;
+}
+
+@media print {
+   html,
+   body {
+      height: auto;
+      background: #fff;
+   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+   color: rgb(var(--label));
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   -webkit-tap-highlight-color: transparent;
 }
 
-/* customized scrollbar on everything */
-*::-webkit-scrollbar {
-  width: 0.7em;
+::selection {
+   background: rgb(var(--accent) / 0.3);
 }
 
-*::-webkit-scrollbar-track {
-  background: transparent;
-  height: 100%;
+@layer components {
+   /* Translucent material for windows' chrome, menus and popovers. */
+   .material {
+      @apply bg-surface-2/80 backdrop-blur-2xl backdrop-saturate-150;
+   }
+   .material-thick {
+      @apply bg-surface/90 backdrop-blur-2xl backdrop-saturate-150;
+   }
+   .hairline {
+      @apply border-separator/10;
+   }
+   .focus-ring {
+      @apply outline-none focus-visible:ring-2 focus-visible:ring-accent/70 focus-visible:ring-offset-0;
+   }
 }
 
-*::-webkit-scrollbar-thumb {
-  background-color: #2e302f;
-  border-radius: 1rem;
-  width: 0.5rem;
+/* Thin overlay-style scrollbars, like macOS. */
+.mac-scroll {
+   scrollbar-width: thin;
+   scrollbar-color: rgb(var(--separator) / 0.25) transparent;
+}
+.mac-scroll::-webkit-scrollbar {
+   width: 10px;
+   height: 10px;
+}
+.mac-scroll::-webkit-scrollbar-track {
+   background: transparent;
+}
+.mac-scroll::-webkit-scrollbar-thumb {
+   background-color: rgb(var(--separator) / 0.22);
+   border-radius: 999px;
+   border: 3px solid transparent;
+   background-clip: content-box;
+}
+.mac-scroll::-webkit-scrollbar-thumb:hover {
+   background-color: rgb(var(--separator) / 0.4);
+}
+
+.no-scrollbar {
+   scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+   display: none;
+}
+
+/* Toggled by SettingsProvider from prefers-reduced-motion or the Settings override. */
+.reduce-motion *,
+.reduce-motion *::before,
+.reduce-motion *::after {
+   transition-duration: 0.01ms !important;
+   animation-duration: 0.01ms !important;
 }
