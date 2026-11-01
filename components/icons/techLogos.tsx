@@ -1,7 +1,72 @@
-// Brand logos for technologies, keyed by the names used in data/skills.ts.
+// Brand logos for technologies, keyed by the names used in data/skills.ts and data/projects.ts.
+// Hand-tuned multi-colour logos come first; the rest are single-path brand icons from
+// simple-icons (CC0). Named imports keep only the icons used here in the bundle.
 import type { ReactNode } from "react";
+import {
+   siAndroid,
+   siClaude,
+   siCss,
+   siDart,
+   siDocker,
+   siElectron,
+   siFastapi,
+   siFigma,
+   siFirebase,
+   siGit,
+   siGithubcopilot,
+   siHtml5,
+   siKotlin,
+   siMeta,
+   siMongodb,
+   siNestjs,
+   siPostgresql,
+   siSolidity,
+   siSwagger,
+   siTypescript,
+   siVite,
+   type SimpleIcon,
+} from "simple-icons";
 
-export const techLogos: Record<string, { viewBox: string; body: ReactNode }> = {
+type Logo = { viewBox: string; body: ReactNode };
+
+/** Near-black brand colours would vanish in dark mode, so those follow the text colour instead. */
+function isDark(hex: string) {
+   const [r, g, b] = [0, 2, 4].map((i) => parseInt(hex.slice(i, i + 2), 16));
+   return 0.299 * r + 0.587 * g + 0.114 * b < 70;
+}
+
+function simple(icon: SimpleIcon): Logo {
+   return {
+      viewBox: "0 0 24 24",
+      body: <path d={icon.path} fill={isDark(icon.hex) ? "currentColor" : `#${icon.hex}`} />,
+   };
+}
+
+const brandLogos: Record<string, Logo> = {
+   TypeScript: simple(siTypescript),
+   Dart: simple(siDart),
+   Kotlin: simple(siKotlin),
+   HTML5: simple(siHtml5),
+   CSS3: simple(siCss),
+   Android: simple(siAndroid),
+   NestJS: simple(siNestjs),
+   MongoDB: simple(siMongodb),
+   PostgreSQL: simple(siPostgresql),
+   Firebase: simple(siFirebase),
+   Git: simple(siGit),
+   Docker: simple(siDocker),
+   Vite: simple(siVite),
+   Electron: simple(siElectron),
+   Swagger: simple(siSwagger),
+   Figma: simple(siFigma),
+   "Claude Code": simple(siClaude),
+   "GitHub Copilot": simple(siGithubcopilot),
+   Solidity: simple(siSolidity),
+   FastAPI: simple(siFastapi),
+   "Llama 3": simple(siMeta),
+};
+
+const handLogos: Record<string, Logo> = {
    JavaScript: {
       viewBox: "0 0 48 48",
       body: (
@@ -199,4 +264,13 @@ export const techLogos: Record<string, { viewBox: string; body: ReactNode }> = {
          </>
       ),
    },
+};
+
+export const techLogos: Record<string, Logo> = {
+   ...brandLogos,
+   ...handLogos,
+   // Aliases for names that share a logo.
+   "Vue 2": handLogos.Vue,
+   "Android (Kotlin)": brandLogos.Android,
+   "H5 / Mobile Web": brandLogos.HTML5,
 };
