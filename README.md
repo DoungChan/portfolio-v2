@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Sroeun Doungchan — Portfolio (v3)
 
-## Getting Started
+A developer portfolio presented as a macOS-inspired desktop: menu bar, Dock with magnification, draggable windows, Spotlight search and a set of "apps" for each portfolio section. Built with Next.js 14 (App Router), React 18, TypeScript, Tailwind CSS and Framer Motion.
 
-First, run the development server:
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev     # http://localhost:3000
+npm run build   # production build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Editing content
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+All portfolio content lives in `data/` — no component changes needed:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+| File                 | Used by                                       |
+| -------------------- | --------------------------------------------- |
+| `data/profile.ts`    | Finder (About), Terminal, Mail, SEO metadata  |
+| `data/projects.ts`   | Projects, Safari, Spotlight                   |
+| `data/experience.ts` | Experience, Terminal, Spotlight               |
+| `data/skills.ts`     | Skills, Terminal, Spotlight                   |
 
-## Learn More
+Fields marked `// TODO` are placeholders to replace with real details. Project screenshots go in `public/`. Technology logos are in `components/icons/techLogos.tsx`; skills without a logo render as a monogram.
 
-To learn more about Next.js, take a look at the following resources:
+## Résumé
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The résumé is generated from the same `data/` files. It opens in the Preview app (`/resume`), and its printable version is at `/print/resume`. After you change any content, regenerate the downloadable PDF while the app is running:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+npm run dev            # in one terminal
+npm run resume:pdf     # writes public/resume.pdf using your installed Chrome
+```
 
-## Deploy on Vercel
+Set `CHROME_PATH` if Chrome isn't found, or `RESUME_URL` to print from another host.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+app/                 Routes (/, /about, /project, /skill, /experience, /contact) + metadata, sitemap, robots
+components/os/       Desktop shell: Desktop, MenuBar, Dock, Window, WindowManager, Spotlight, ControlCenter, …
+components/apps/     One component per app (Finder, Safari, Terminal, Projects, Skills, Experience, Mail, Settings)
+components/ui/       Shared primitives (buttons, tags, toggles, tech logos, project images)
+lib/apps.ts          App registry: names, routes, window sizes, Dock order
+data/                Portfolio content
+```
+
+Each route renders the same desktop with its app already open, so every section is server-rendered and shareable. Focusing a window updates the URL.
+
+## Keyboard shortcuts
+
+- `⌘K` / `Ctrl K` — Spotlight search (↑/↓ to move, Enter to open, Esc to close)
+- Double-click a title bar — zoom / restore
+- Terminal: `help` lists commands; ↑/↓ history, Tab completion, `Ctrl L` clears
