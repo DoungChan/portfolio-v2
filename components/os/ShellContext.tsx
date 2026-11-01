@@ -19,7 +19,7 @@ const ShellContext = createContext<ShellValue | null>(null);
 export function ShellProvider({ children }: { children: React.ReactNode }) {
    const [spotlightOpen, setSpotlightOpen] = useState(false);
    const [notice, setNotice] = useState<Notice | null>(null);
-   const timer = useRef<ReturnType<typeof setTimeout>>();
+   const timer = useRef<ReturnType<typeof setTimeout>>(undefined);
 
    const notify = useCallback((title: string, body?: string) => {
       clearTimeout(timer.current);
